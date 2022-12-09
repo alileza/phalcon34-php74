@@ -17,7 +17,7 @@ services:
       build: docker/app
       restart: always
       ports:
-        - "80:80"
+        - "8080:80"
       volumes:
         - ./phpconfig:/usr/local/etc/php
         - ./application:/var/www/html

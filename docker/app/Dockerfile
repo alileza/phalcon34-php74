@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM php:7.4-apache
 
 # PSR for phalcon 4.x
 ARG PSR_VERSION=0.6.1
@@ -26,6 +26,7 @@ RUN set -xe && \
 
 # Install packages
 RUN apt-get update && \
+        apt-get install -y libzip-dev && \
         apt-get install -y zlib1g-dev && \ 
         apt-get install -y libpng-dev && \
         apt-get install nano
